@@ -6,7 +6,7 @@ for (let i = string.length -1; i >= 0; i--) {
     const letter = string[i];
     reversedString += letter;
 }
-console.log(reversedString);
+// console.log(reversedString);
 // ------------------------------------
 // ------------------------------------
 
@@ -23,7 +23,7 @@ const sumOfPositiveNumbers = (numbers) =>{
     return sum
 }
 
-sumOfPositiveNumbers([2, -5, 10, -3, 7])
+// sumOfPositiveNumbers([2, -5, 10, -3, 7])
 // ------------------------------------
 // ------------------------------------
 
@@ -47,7 +47,7 @@ const addUp = (arr, num) => {
   return result;
 };
 
-console.log(addUp([1, 3, 6, 8, 11, 15], 9));
+// console.log(addUp([1, 3, 6, 8, 11, 15], 9));
 // ---------------------------------------
 // ---------------------------------------
 // Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
@@ -85,3 +85,14 @@ const calculator = (num1, operator, num2) => {
 // Task 7: Implement a function that converts a Roman numeral to an integer. The function should take a Roman numeral string (e.g., "IX" or "XXI") as input and return the corresponding integer value.
 
 
+// Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+
+const secondSmallestNumber =(arr)=>{
+  const smallestNumber = Math.min(...arr)
+  const getterThenSmallestNumbers = arr.filter(num=> num > smallestNumber)
+  const secondSmallestNumber = Math.min(...getterThenSmallestNumbers)
+return secondSmallestNumber
+}
+
+
+console.log(secondSmallestNumber([2,4,2,3,4,3]));
