@@ -79,16 +79,16 @@ const calculator = (num1, operator, num2) => {
 // ---------------------------------------
 
 // Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
-const allGradient = [['k','h', 'a'], [1,3,4], ['#', '$', '%']]
-let password = ''
+
 
 
 const passwordGenerator = (length) =>{
   const allGradient = [
-    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=']
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'], ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=']
   ]
   let password = ''
-  for (let i = 0; i < Math.ceil(length / 3); i++) {
+  for (let i = 0; i < Math.ceil(length / 4); i++) { // divided 4 because are all gradient have 4 array
     for (const gradient of allGradient) {
       password += gradient[Math.floor(Math.random() * gradient.length)]
     }    
